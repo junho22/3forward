@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자연습</title>
+</head>
+<body>
+    <input type="text" name="" id="x"><br>
+    <input type="text" name="" id="y"><br>
+    < button onclick="fun1();">연산자</button>
+    <div id="result">
+    <script>
+        let score = parseInt(prompt("점수입력", 0));
+        if(score>= 60){
+            console.log(`당신의 점수$(score)이고 합격입니다`);
+        } else {
+            console.log(`당신의 점수$(score이고 불합격입니다`);
+        }
+        let grade = ``;
+        if (score >= 90){
+            grade = `a`;
+        } else if (score >= 80){
+            grade = `b`;
+        } else   {
+            grade = `F`;
+        }
+        console.log(`${data}의 학점 : ${grade}`);
+       1 /*
+        function fun1(){
+let x = parselnt(document.getElementbyid("x").value);
+let y = parselnt(document.getElementbyid("y").value);
+1(//) text = x+ "+"+y+"="+(x+y)2(;)- 1,2 괄호는 추가했음
+let text = `${x} + ${y}= ${x+y}`<br>;
+   tect += `${x} ** ${y}= ${x**y}`<br>;
+   tect += `${x} % ${y}= ${x%y}`<br>;
+document.getElementbyid("result").innerHTML = text
+}
+
+2 /*
+let input = prompt("수식입력,0"));
+let result = eval(input)
+document = ~~~
+
+a= a+1
+b= b+1
+a++; b++;
+
+3/*
+let a = 50;
+{
+let a = 10;
+console.log(a); //1)
+a=20;
+console.log(a); //2)
+}
+console.log(a); //3)
+
+b= 70;
+var b; ( var는 선언안해도되고, let으로 써야함)
+console.log(b);//4)
+
+c=100;
+let c;
+console.log(c);//5) 
+
+    </script>
+</body>
+</body>
+</html>
