@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1851793 이준호 (event handler)</title>
+    <style>
+        #test {
+            width: 200px; 
+            height: 150px;
+            border: 1px solid gray;
+        }
+    </style>
+<script>
+    /* 이벤트 리스너 만들기
+    - HTML 태그 내 작성 : Inline 이벤트 처리
+    - 이벤트 발생시 funtion 호출하는 방식
+    - addEventListener() 메소드 사용
+    element.addEventListner(Envet, funtion);
+    */
+
+    /* onmouse over 말고도 다른거로 응용하기 */
+
+   function mover(e){
+       e.innerHTML = "안녕하세요~~";
+       e.style.backgroundColor='pink';
+   }
+   function mout(e){
+       e.innerHTML='동아대학교 경영정보학과';
+       e.style.backgroundColor="white";
+   }
+   /*addEventListener() 메소드 사용*/ 
+   let name = '';
+   function init(){
+       name = document.getElementById("fname");
+       name.addEventListener("focus",bgcolor);
+       name.addEventListener("blur",myfunc);
+   }
+   function bgcolor(){
+       name.style.backgroundColor = 'gray';
+   }
+   function myfunc(){
+       name.value = name.value.toUpperCase();
+       name.style.backgroundColor = 'white';
+   }
+</script>
+</head>
+<body onload="init()">
+    <!--인라인 이벤트 리스너-->
+    <p id="demo" onmouseover="this.style.backgroundColor='orange'; this.innerHTML= '안녕하세요';"onmouseout="this.style.backgroundColor='white';">
+         1851793, 이준호
+    </p>
+    <div id="test" onmouseover="mover(this);" onmouseout="mout(this);">
+        동아대학교 경영정보학과
+    </div>
+    영문이름을 입력 : <input type="text" name="" id="fname">
+</body>
+</html>
