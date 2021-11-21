@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome to Junho's web</title>
+    <link rel="stylesheet" href="./css/w1.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="w3.css">
+  <script>
+       const liStyle = function(){
+            const liList = document.getElementsByTagName("li");
+            console.log(liList)
+            for(let i=0; i<liList.length; i++){
+                liList[i].style.color = "blue";
+            }
+        }
+    function funAppend(){
+        const list = document.createElement("li");
+        const work = document.getElementById("text").value;
+        const node = document.createTextNode(work);
+        list.appendChild(node);
+        const ele = document.getElementById("ol1");
+        ele.appendChild(list);
+
+       }
+       function cartAppend(e){
+           const x = document.getElementById(e);
+           const ele = document.getElementById("cart");
+           ele.appendChild(x);
+       }
+       function cartRemove(e){
+           const x = document.getElementById(e);
+           const cart = document.getElementById("cart");
+           const list = document.getElementById("list");
+           cart.removeChild(x);
+           list.appendChild(x);
+       }
+  </script> 
+</style>
+    <body class="w3-margin-top">
+        <div id="page">
+    <header>
+        <body>
+
+            <!-- Sidebar -->
+            <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+              <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+              <a href="#" class="w3-bar-item w3-button">사진모음</a>
+              <a href="#" class="w3-bar-item w3-button">연락처</a>
+              <a href="#" class="w3-bar-item w3-button">인스타그램</a>
+              <a href="#" class="w3-bar-item w3-button">깃허브주소</a>
+              
+            </div>
+            
+            <!-- Page Content -->
+            <div class="w3-teal">
+              <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button>
+              <div class="w3-container">
+                <h1></h1>
+              </div>
+            </div>
+            <script>
+            function w3_open() {
+              document.getElementById("mySidebar").style.display = "block";
+            }
+            
+            function w3_close() {
+              document.getElementById("mySidebar").style.display = "none";
+            }
+            </script>
+                 
+            </body>
+            </html> 
+                    <h5><img src="./junho img/3forward.JPG" alt="logo"></h5>
+    </header class="w3-container w3-margin-top">
+    <nav>
+        <!--.navi>ul>li*5>a[href="sub$$.html"]{menu_$$}-->
+      <div class="navi">
+        <navi>
+            <ul class="w3-bar w3-text-black w3-center">
+                <li class="w3-bar-item w3-button w3-padding-large"><a href="sub01.html">소개</a></li>
+                <li class="w3-bar-item w3-button w3-padding-large"><a href="sub02.html">인사말</a></li>
+                <li class="w3-bar-item w3-button w3-padding-large"><a href="sub03.html">출생년도</a></li>
+                <li class="w3-bar-item w3-button w3-padding-large"><a href="sub04.html">향후 계획</a></li>
+                <li class="w3-bar-item w3-button w3-padding-large"><a href="sub05.html">준비중</a></li>
+            </ul>
+        </navi>
+    </div>
+</nav>
+<section class="w3-left w3-container" style="width: 80%;">
+    <br>
+    <br>
+	<article class="calli w3-margin-top" ><h3 class="w3-text-yellow w3-xlarge">사진 모음</h3></article>
+	<!-- .calli01>img[src="../images/photo$.jpg"]*6 -->
+	<div class="junho img" >
+	  <div class="w3-row">
+		<img class="w3-col s3 w3-border w3-margin" src="./images/불고기피자.JPG" alt="불고기피자" />
+		<img class="w3-col s3 w3-border w3-margin"  src="./images/전포동 버섯리조또.jpg" alt="버섯리조또" />
+		<img class="w3-col s3 w3-border w3-margin"  src="./images/전포동 이준호.jpg" alt="전포동 이준호" />
+	  </div>
+	  <br>
+		<div class="w3-row">
+			<img class="w3-col s3 w3-border w3-margin"  src="./images/전포동 이준호3.jpg" alt="전포동 이준호3" />
+			<img class="w3-col s3 w3-border w3-margin"  src="./images/전포동 이준호2.jpg" alt="전포동 이준호2" />
+            <img class="w3-col s3 w3-border w3-margin"  src="./images/scaxAXAC.jpg" alt="생일케이크 이준호" />
+		</div>
+	</div>
+        <header>
+        <h1>
+            <nav>
+                </ul>
+            </nav>
+        </h1>
+        </section>
+        <aside class="right">
+            <div class="login">
+                 <h3 >Log In</h3>
+                     <form action="#" >
+                                        아이디  :<input type="text" name="id"/> <br />
+                                        패스워드:<input type="password" name="pass"/> <br /><br />
+                         <input type="submit" value="로그인" />
+                         <input type="reset" value="초기화" /><br />
+                         <a href="register.html" target="_blank" id="register">회원가입</a>
+                         <a href="#" id="forgot">비밀번호분실</a>
+                     </form>
+                 </div>
+            <div class="info">
+             <div id="aside-list-1"  >
+                 <h5 class="w3-text-pink">즐겨찾기</h5>
+                         <ul>
+                             <li><a href="http://www.naver.com">네이버</a></li>
+                             <li><a href="https://www.kipo.go.kr/kpo">특허청</a></li>
+                             <li><a href="http://www.dau.ac.kr">동아대학교</a></li>
+                             <li><a href="www.instargram.com/__flowlee">인스타그램</a></li>
+                             <li><a href="https://map.naver.com/v5/entry/place/16510094?c=14362886.859535273,4192656.4727460146,15,0,0,0,dh&placePath=%3Fentry=plt">우리집 근처 프랜차이즈</a></li>
+                         </ul>
+                 <a href="#">북마크 보기 </a>
+             </div>
+             <div id="aside-list-2" >
+                         <h4 class="w3-text-pink">최근 글</h4>
+                         <ul>
+                             <li><a href="#">준비중</a></li>
+                             <li><a href="#">준비중</a></li>
+                             <li><a href="#">준비중</a></li>
+                             <li><a href="#">준비중</a></li>
+                         </ul>
+              </div>
+            </div>
+         </aside>
+            <article class="media w3-xlarge w3-text-green w3-margin-top"><h3>여백의 美</h3></article>
+                <h2>좋아하는 음악</h2>
+                <audio src="./media/음성 001.m4a" controls>
+                지원하지 않는 브라우저 입니다.
+                </audio>
+
+                <h3 style="font-size: xx-large; color: pink;">여백의 美</h3>
+                <video src="./media/이준호.mp4" controls></video>
+                <video src="./media/KakaoTalk_20211107_222357750.mp4" controls></video>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/sji10s1fwMM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ED2rOHM1od0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/qV8iHntDk6c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/WdZJSkZISNE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <hr>
+                <h2>
+                    <table border="1">
+                        <tr>
+                            <th>년도</th>
+                            <th>내용</th>
+                            <th>비고</th>
+                        </tr>
+                        <tr>
+                            <td>현재</td>
+                            <td>동아대학교 경영정보</td>
+                            <td>열심히 A+받길 노력중</td>
+                        </tr>
+                        <tr>
+                            <th>2020</th>
+                            <th>20.3월~</th>
+                            <th>편입생</th>
+                        </tr>
+                        <tr>
+                            <th>2021</th>
+                            <th>웹프로그래밍</th>
+                            <th>수강 및 홈페이지 구성중</th>
+                        </tr>
+                        
+                    </table>
+                    <br>
+                    <hr>
+        </section>
+    </header>
+    <section></section>
+    <footer class="w3-white">
+        <div class="w3-row"> <!-- grid 를 이용하여 작성하였음  -->
+            <div class="w3-col s4  w3-container" >
+                <h5> Contact Us</h5>
+                <ul>
+                  <li>Phone: 010 4603 ****</li>
+                  <li>Email: <a href="mailto:jun129600@naver.com" title="Email Us">jun129600@naver.com</a></li>
+                  <li><a href="https://https://github.com/junho22/3forward">https://github.com/junho22/3forward</a></li>
+                </ul>
+                
+            </div>
+            <div class="w3-col s4  w3-container" >
+                <h5> Follow Us</h5>
+                <a href="https://www.facebook.com/profile.php?id=100005147378182"><i class="fa fa-facebook" style="font-size:30px;color:black"></i></a>
+                <a href="http://www.instagram.com/__flowlee/"><i class="fa fa-instagram" style="font-size:30px;color:black"></i></a>
+                <br /><br/>
+                Copyright (c) 2021 lee Jun Ho<br/>
+            </div>
+            <div class="w3-col s4 w3-container" >
+                <h5> About Us</h5>
+                  <a href="https://blog.naver.com/jun129600/222363195643" <i class="#"><span>클릭해보세요</span></a>
+                
+            </div>
+    </footer>
+</head>
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</body>
+</html>
