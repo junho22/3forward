@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="w3.css">
+    <title>Document</title>
+    <script>
+        const liStyle = function(){
+            const liList = document.getElementsByTagName("li");
+            console.log(liList)
+            for(let i=0; i<liList.length; i++){
+                liList[i].style.color = "blue";
+            }
+        }
+    function funAppend(){
+        const list = document.createElement("li");
+        const work = document.getElementById("text").value;
+        const node = document.createTextNode(work);
+        list.appendChild(node);
+        const ele = document.getElementById("ol1");
+        ele.appendChild(list);
+
+       }
+       function cartAppend(e){
+           const x = document.getElementById(e);
+           const ele = document.getElementById("cart");
+           ele.appendChild(x);
+       }
+       function cartRemove(e){
+           const x = document.getElementById(e);
+           const cart = document.getElementById("cart");
+           const list = document.getElementById("list");
+           cart.removeChild(x);
+           list.appendChild(x);
+       }
+    </script>
+<style>
+    #cart, #list{
+        display: flex;
+    }
+    #img1, #img2, #img3 {
+        flex : 3;
+    }
+</style>
+</head>
+<body>
+    <h2> 장바구니 </h2>
+    <div id="cart" style="width: 700px; height: 250px; border: 1px solid gray;">
+
+    </div>
+    <h2> 상품리스트 </h2>
+<div id="list" style="width: 700px; height: 250px; border: 1px solid gray;">
+    <div id="img1" >
+        <img src="./images/이준호.jpg" width="150" height="100">
+        <div>
+          <p>₩9,000/선크림</p>
+          <button onclick="cartAppend('img1');">추가</button>
+          <button onclick="cartRemove('img1');">삭제</button>
+        </div>
+    </div>
+    <div id="img2">
+        <img src="./images/이준호2.jpg" width="150" height="100">
+        <div>
+          <p>₩5,000/신발</p>
+          <button onclick="cartAppend('img2');">추가</button>
+          <button onclick="cartRemove('img2');">삭제</button>
+        </div>
+    </div>
+    <div id="img3">
+        <img src="./images/이준호31.jpg" width="150" height="100">
+        <div >
+        <p>₩30,000/여성용 보스턴백</p>
+          <button onclick="cartAppend('img3');">추가</button>
+          <button onclick="cartRemove('img3');">삭제</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
