@@ -8,7 +8,38 @@
     <link rel="stylesheet" href="./css/w1.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </style>
+    <link rel="stylesheet" href="w3.css">
+  <script>
+       const liStyle = function(){
+            const liList = document.getElementsByTagName("li");
+            console.log(liList)
+            for(let i=0; i<liList.length; i++){
+                liList[i].style.color = "blue";
+            }
+        }
+    function funAppend(){
+        const list = document.createElement("li");
+        const work = document.getElementById("text").value;
+        const node = document.createTextNode(work);
+        list.appendChild(node);
+        const ele = document.getElementById("ol1");
+        ele.appendChild(list);
+
+       }
+       function cartAppend(e){
+           const x = document.getElementById(e);
+           const ele = document.getElementById("cart");
+           ele.appendChild(x);
+       }
+       function cartRemove(e){
+           const x = document.getElementById(e);
+           const cart = document.getElementById("cart");
+           const list = document.getElementById("list");
+           cart.removeChild(x);
+           list.appendChild(x);
+       }
+  </script> 
+</style>
     <body class="w3-margin-top">
         <div id="page">
     <header>
@@ -66,7 +97,7 @@
 	<!-- .calli01>img[src="../images/photo$.jpg"]*6 -->
 	<div class="junho img" >
 	  <div class="w3-row">
-		<img class="w3-col s3 w3-border w3-margin" src="./images/불고기피자.JPG" alt="불고기피자" />
+		<img class="w3-col s3 w3-border w3-margin" src="./images/불고기피자.jpg" alt="불고기피자" />
 		<img class="w3-col s3 w3-border w3-margin"  src="./images/전포동 버섯리조또.jpg" alt="버섯리조또" />
 		<img class="w3-col s3 w3-border w3-margin"  src="./images/전포동 이준호.jpg" alt="전포동 이준호" />
 	  </div>
@@ -121,7 +152,7 @@
          </aside>
             <article class="media w3-xlarge w3-text-green w3-margin-top"><h3>여백의 美</h3></article>
                 <h2>좋아하는 음악</h2>
-                <audio src="./media/음성 001.m4a" controls>
+                <audio src="./media/이준호.mp4" controls>
                 지원하지 않는 브라우저 입니다.
                 </audio>
 
@@ -159,13 +190,6 @@
                     </table>
                     <br>
                     <hr>
-                    <div class="w3-container">
-                        <h2>  상품 등록</h2>
-                        저자명 : <input class="w3-input" type="text" name="" id="author"> <br>
-                        사진 : <input class="w3-input" type="file" name="" id="file"> <br>
-                        가격 : <input class="w3-input" type="text" name="" id="price"> <br>
-                        <button class= "w3-button w3-blue" onclick="fileUpload();"> 상품등록</button>
-                        <button class= "w3-button w3-blue" onclick="tablePrint();"> 상품리스트</button>
         </section>
     </header>
     <section></section>
